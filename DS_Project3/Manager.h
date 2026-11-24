@@ -12,6 +12,7 @@ private:
     Manager(const Manager&) = delete;
     Manager& operator=(const Manager&) = delete;
     ofstream fout;
+    ifstream fin;
     void printSuccess(const string& command, const string& body);
 public:
     Manager();
@@ -27,4 +28,6 @@ public:
     bool mFLOYD(char option);
     bool mSORT(char option, int vertex, char order, char method);
     void printErrorCode(int code);
+
+    vector<string> split(const string& line, char delim);
 };

@@ -11,8 +11,8 @@ using Adjacent = map<int, Weight>;
 class Graph
 {
 protected:
-    bool m_Type; 
-    int m_Size;
+    bool m_Type; // 0 == list, 1 == matrix
+    int m_Size;  
     void collectUndirected(int vertex, Adjacent* result) const;
 public:
     Graph(bool type, int size);
